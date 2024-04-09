@@ -29,7 +29,8 @@
         "drupal/simple_multistep": "^2.0",
         "drupal/svg_image": "^3.0",
         "drupal/video": "^3.0",
-        "drush/drush": "^12.4"
+        "drush/drush": "^12.4",
+        "platformsh/config-reader": "^2.4"
     },
     "conflict": {
         "drupal/drupal": "*"

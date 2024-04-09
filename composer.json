@@ -103,6 +103,11 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
+        },
+        "patches": {
+            "drupal/simple_multistep": {
+                "TypeError: key(): Argument #1 ($array) must be of type array, null given in key()": "https://www.drupal.org/files/issues/2023-12-21/simple_multistep-3410339-2.patch"
+            }
         }
     }
 }

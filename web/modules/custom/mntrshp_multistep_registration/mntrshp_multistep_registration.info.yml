@@ -1,0 +1,5 @@
+name: 'Mntrshp Multistep Registration'
+type: module
+description: 'Custom multistep registration'
+package: Custom
+core_version_requirement: ^10

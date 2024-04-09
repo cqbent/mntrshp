@@ -1,0 +1,7 @@
+mntrshp_multistep_registration.example:
+  path: '/custom-registration-form'
+  defaults:
+    _title: 'Example'
+    _form: 'Drupal\mntrshp_multistep_registration\Form\RegistrationForm'
+  requirements:
+    _permission: 'access content'

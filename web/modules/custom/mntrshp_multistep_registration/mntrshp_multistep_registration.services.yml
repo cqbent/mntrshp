@@ -1,0 +1,4 @@
+services:
+  mntrshp_multistep_registration.form_alter:
+    class: Drupal\mntrshp_multistep_registration\CustomRegistrationFormAlter
+    arguments: ['@entity_type.manager']

@@ -1,0 +1,196 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Mntrshp Multistep Registration module.
+ */
+use Drupal\Core\Form\FormStateInterface;
+
+
+function mntrshp_multistep_registration_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'user_register_formZZ') {
+    $form['#theme'] = 'mntrshp_multistep_registration';
+    if ($form_state->get('page_num') == NULL) {
+      $form_state->set('page_num', 1);
+      $form_state->set('page_values', []);
+    }
+    $pages = [
+      1 => [
+        'name',
+        'mail',
+        'pass',
+        'account',
+        'field_first_name',
+        ],
+      2 => [
+        'field_last_name',
+        'field_areas_of_interest',
+        'field_personal_letter_field',
+        'field_personal_video',
+        'field_general_skills',
+        'field_city',
+        'field_state',
+        'field_zip',
+        'actions'
+      ],
+    ];
+    $validation = [];
+    // Disable all the fields to begin.
+    foreach ($pages as $page => $fields) {
+      if ($page != $form_state->get('page_num')) {
+        foreach ($fields as $field) {
+          $form[$field]['#access'] = FALSE;
+        }
+      }
+      else {
+        foreach ($fields as $field) {
+          array_push($validation, [$field]);
+        }
+      }
+    }
+    // Add our custom validation function to the start of the array.
+    array_unshift($form['#validate'], 'mntrshp_multistep_registration_pre_submit');
+
+    $form['my_module_actions'] = [
+      '#type' => 'actions',
+      '#weight' => 100,
+    ];
+
+    $form['my_module_actions']['next'] = [
+      '#type' => 'submit',
+      '#value' => t('Next'),
+      '#submit' => [
+        'mntrshp_multistep_registration_form_submit',
+      ],
+      '#limit_validation_errors' => $validation,
+      '#access' => FALSE,
+      '#weight' => 1,
+    ];
+
+    $form['my_module_actions']['previous'] = [
+      '#type' => 'submit',
+      '#value' => t('Back'),
+      '#submit' => [
+        'mntrshp_multistep_registration_form_submit',
+      ],
+      '#access' => FALSE,
+      '#limit_validation_errors' => $validation,
+    ];
+
+    switch ($form_state->get('page_num')) {
+      case 1:
+        // Allow access to the pages on this page.
+        foreach ($pages[$form_state->get('page_num')] as $form_key) {
+          $form[$form_key]['#access'] = TRUE;
+        }
+
+        // Enable our next button.
+        $form['my_module_actions']['next']['#access'] = TRUE;
+
+        break;
+
+      case 2:
+        $page_values = $form_state->get('page_values');
+        // Add our previous buttons.
+        $form['my_module_actions']['next']['#access'] = FALSE;
+        $form['my_module_actions']['previous']['#access'] = TRUE;
+
+        break;
+    }
+
+    var_dump($form_state->get('page_values'));
+
+  }
+  elseif ($form_id == 'user_register_formXX') {
+    \Drupal::service('mntrshp_multistep_registration.form_alter')->alterForm($form, $form_state, $form_id);
+  }
+
+  return $form;
+
+}
+
+/**
+ * Custom form submit for the user registration form.
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+
+
+function mntrshp_multistep_registration_form_submit($form, Drupal\Core\Form\FormStateInterface $form_state) {
+  // Get the current page that was submitted.
+  $current_page = $form_state->get('page_num');
+
+  // Get the fields for the pages.
+  // These are the same as the $pages variable in the form_alter.
+  // I've excluded them here for brevity.
+  $fields = [
+    1 => [
+      'name',
+      'mail',
+      'pass',
+      'account',
+      'field_first_name',
+    ],
+    2 => [
+      'field_last_name',
+      'field_areas_of_interest',
+      'field_personal_letter_field',
+      'field_personal_video',
+      'field_general_skills',
+      'field_city',
+      'field_state',
+      'field_zip',
+      'actions'
+    ],
+  ];
+
+  $page_values = $form_state->get('page_values');
+
+  if ($form_state->getValue('next')) {
+    // Add the values to the page_value array.
+    foreach ($fields[$current_page] as $key) {
+      $page_values[$current_page][$key] = $form_state->getValue($key);
+    }
+    // Increment the page number.
+    $current_page++;
+  }
+  else if ($form_state->getValue('previous')) {
+    // Discard the values the page_value array.
+    foreach ($fields[$current_page] as $key) {
+      $page_values[$current_page][$key] = $form_state->getValue($key);
+      //$form_state->setValue($key, $page_values[$current_page][$key]);
+      //unset($page_values[$current_page][$key]);
+    }
+    // Decrement the page number.
+    $current_page--;
+  }
+
+  $form_state
+    ->set('page_num', $current_page)
+    ->set('page_values', $page_values)
+    ->setRebuild(TRUE);
+
+}
+
+/**
+ * Custom function to re-add the form state values back from the page values.
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function mntrshp_multistep_registration_pre_submit($form, Drupal\Core\Form\FormStateInterface $form_state) {
+  // Load the submitted values.
+  $page_values = $form_state->get('page_values');
+  $submitted_values = $form_state->getValues();
+
+  // Put all the paged values back into the form_state values.
+  foreach ($page_values as $page_num => $fields) {
+    foreach ($fields as $key => $value) {
+      $submitted_values[$key] = $value;
+    }
+  }
+
+  // Save the form_state values for further processing.
+  $form_state->setValues($submitted_values);
+}

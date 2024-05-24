@@ -1,0 +1,16 @@
+{
+  "name": "mntrshp_react",
+  "private": true,
+  "scripts": {
+    "livereload": "livereload --exclusions node_modules/ --exts 'css,js,twig,theme,apng,avif,gif,jpg,jpeg,jfif,pjpeg,pjp,png,svg,webp'"
+  },
+  "devDependencies": {
+    "livereload": "^0.9.3"
+  },
+  "dependencies": {
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

@@ -1,0 +1,20 @@
+uuid: 462c447a-19ed-468f-8b84-dc37152f2ca9
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mntrshp_react
+_core:
+  default_config_hash: B2x9pMo6egNrQ9n0vEwuSs8wW6razLBw1gZpTuo7OXI
+id: mntrshp_react_page_title
+theme: mntrshp_react
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

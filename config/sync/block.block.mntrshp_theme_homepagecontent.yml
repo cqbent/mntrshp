@@ -1,0 +1,38 @@
+uuid: 4bed7de7-ec3a-4f8d-86f1-3cab342fcaf6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:19e3b21b-b031-425b-8615-804f8eba0102'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - mntrshp_theme
+id: mntrshp_theme_homepagecontent
+theme: mntrshp_theme
+region: content
+weight: -9
+provider: null
+plugin: 'block_content:19e3b21b-b031-425b-8615-804f8eba0102'
+settings:
+  id: 'block_content:19e3b21b-b031-425b-8615-804f8eba0102'
+  label: 'Home Page Content'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous

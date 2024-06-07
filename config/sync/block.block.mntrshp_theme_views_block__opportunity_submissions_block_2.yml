@@ -1,0 +1,39 @@
+uuid: 7f0b45c9-e004-4e01-bc67-a650d92aadb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.opportunity_submissions
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - mntrshp_theme
+id: mntrshp_theme_views_block__opportunity_submissions_block_2
+theme: mntrshp_theme
+region: content
+weight: -2
+provider: null
+plugin: 'views_block:opportunity_submissions-block_2'
+settings:
+  id: 'views_block:opportunity_submissions-block_2'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      candidate: candidate

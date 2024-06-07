@@ -1,0 +1,11 @@
+uuid: ccdd4796-192d-47ae-a90c-79ed8cedb269
+langcode: en
+status: true
+dependencies:
+  module:
+    - private_message
+id: private_message.token
+label: Token
+description: ''
+targetEntityType: private_message
+cache: true

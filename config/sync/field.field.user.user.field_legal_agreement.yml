@@ -1,0 +1,33 @@
+uuid: 8b6d3dd0-6e39-46ed-ad2b-e135c387ab76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_legal_agreement
+  module:
+    - multiple_registration
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form_required:
+      authenticated: 0
+      candidate: 0
+      employer: 0
+    user_additional_register_form:
+      employer: employer
+      authenticated: 0
+      candidate: 0
+id: user.user.field_legal_agreement
+field_name: field_legal_agreement
+entity_type: user
+bundle: user
+label: 'Legal Agreement'
+description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque nibh a felis egestas sodales. Curabitur risus orci, suscipit ac risus quis, ultricies efficitur ligula. In rutrum egestas enim a aliquet. Praesent nisl eros, bibendum ut odio id, commodo tempus ipsum. Nunc elementum a est nec venenatis. Phasellus et risus in neque tempus commodo. Donec sit amet elit velit. Integer velit lectus, consectetur vitae fringilla hendrerit, ultrices sit amet metus. Quisque posuere vehicula dui, at maximus libero feugiat non. Phasellus '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

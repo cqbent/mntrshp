@@ -1,0 +1,22 @@
+uuid: 404211e5-0d6d-4930-8166-fa578d449d99
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mntrshp_theme
+_core:
+  default_config_hash: GW9peM4oCYiz_b7_05m3v2XXZOYcl0SUgjY3SpkYxh0
+id: mntrshp_theme_breadcrumbs
+theme: mntrshp_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,7 +1,7 @@
 /* VARIABLES */
 
 // colors
-$primary-shade: rgb(255, 78, 46);
+$primary-shade: #08AC97;
 $primary-light: tint-color($primary-shade, 37%);
 $primary-dark: shade-color($primary-shade, 12%);
 $accent-shade: #0079C0;
@@ -15,9 +15,10 @@ $cyan: #17a2b8;
 $white: #fff;
 $gray-100: #f8f9fa;
 $gray-800: #343a40;
+$light-gray: #EEEDE4;
 // scss-docs-start theme-color-variables
 $primary:       $green;
-$secondary:     $primary-shade;
+$secondary:     $green;
 $success:       $green;
 $info:          $cyan;
 $warning:       $yellow;
@@ -36,7 +37,7 @@ $brand-inverse: $primary-shade;
 $body-bg: $white;
 $body-color: $gray-800;
 $inverse-bg: $primary-shade;
-$inverse-color: $white;
+$inverse-color: $primary-light;
 // Links
 //
 // Style anchor elements.

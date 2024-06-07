@@ -1,0 +1,22 @@
+uuid: 2d39171a-e7dc-4424-a17d-e868f43e2e5a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mntrshp_theme
+_core:
+  default_config_hash: JM68e-94IkbQqEmsnvnAFeu2Wxql2FiCVQEtJyQ9ky4
+id: mntrshp_theme_primary_local_tasks
+theme: mntrshp_theme
+region: content
+weight: -7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

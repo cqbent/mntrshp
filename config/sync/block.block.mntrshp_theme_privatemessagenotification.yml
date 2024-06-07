@@ -1,0 +1,21 @@
+uuid: e5ba851e-d0af-491f-893f-55ef74450d67
+langcode: en
+status: true
+dependencies:
+  module:
+    - private_message
+  theme:
+    - mntrshp_theme
+id: mntrshp_theme_privatemessagenotification
+theme: mntrshp_theme
+region: content
+weight: 0
+provider: null
+plugin: private_message_notification_block
+settings:
+  id: private_message_notification_block
+  label: 'Private Message Notification'
+  label_display: visible
+  provider: private_message
+  ajax_refresh_rate: 15
+visibility: {  }

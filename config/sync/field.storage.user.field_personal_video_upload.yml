@@ -1,0 +1,27 @@
+uuid: 35e2b302-f2ce-42c3-8eb0-324464815d29
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - user
+    - video
+id: user.field_personal_video_upload
+field_name: field_personal_video_upload
+entity_type: user
+type: video
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_video:
+    uuid: null
+    data: null
+module: video
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

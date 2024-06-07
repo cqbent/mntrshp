@@ -1,0 +1,41 @@
+uuid: 5e8a5fe8-c348-41b5-95fa-0dbc197ad7dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_organization
+    - node.type.organization
+  module:
+    - multiple_registration
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form_required:
+      authenticated: 0
+      candidate: 0
+      employer: 0
+    user_additional_register_form:
+      employer: employer
+      authenticated: 0
+      candidate: 0
+id: user.user.field_organization
+field_name: field_organization
+entity_type: user
+bundle: user
+label: Organization
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

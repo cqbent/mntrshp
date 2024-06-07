@@ -1,0 +1,20 @@
+uuid: 60490de4-e522-4995-b3be-ac1a6a0b117d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_zip
+  module:
+    - user
+id: user.user.field_zip
+field_name: field_zip
+entity_type: user
+bundle: user
+label: Zip
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

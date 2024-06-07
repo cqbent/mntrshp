@@ -1,0 +1,18 @@
+uuid: 697bac9e-d030-4e93-a98a-18deb9093f15
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_veteran_status
+field_name: field_veteran_status
+entity_type: user
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

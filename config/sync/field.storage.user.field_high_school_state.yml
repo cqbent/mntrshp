@@ -1,0 +1,20 @@
+uuid: 8714f3c4-6c88-4a90-b35f-dc1d0d1e2032
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - user
+id: user.field_high_school_state
+field_name: field_high_school_state
+entity_type: user
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

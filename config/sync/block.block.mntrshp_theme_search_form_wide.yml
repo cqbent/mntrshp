@@ -1,0 +1,23 @@
+uuid: 5dee43c3-31a8-4821-9a5f-e7619b922758
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - mntrshp_theme
+_core:
+  default_config_hash: AW3ptuldy_PVeGWeTmHH1cbVeaFsGj9PCpS-v8whN1E
+id: mntrshp_theme_search_form_wide
+theme: mntrshp_theme
+region: primary_menu
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

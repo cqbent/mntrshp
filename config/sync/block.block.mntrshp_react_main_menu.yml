@@ -1,0 +1,27 @@
+uuid: 68b62481-8ba1-4992-973e-21d327a6b261
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - mntrshp_react
+_core:
+  default_config_hash: FYM5C9QxyOfZurz5x_5YxE5QesB7IzaXlDJZ4JNSsBA
+id: mntrshp_react_main_menu
+theme: mntrshp_react
+region: primary_menu
+weight: -8
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }

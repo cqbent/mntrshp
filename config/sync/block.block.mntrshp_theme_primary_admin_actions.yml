@@ -1,0 +1,20 @@
+uuid: fae22f99-585b-4b79-b483-87b19e792b1a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mntrshp_theme
+_core:
+  default_config_hash: 1cr8aTOvhaGc1nLnq0CtFjq8O_H-N6-AtVOHQbkeofg
+id: mntrshp_theme_primary_admin_actions
+theme: mntrshp_theme
+region: content
+weight: -8
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

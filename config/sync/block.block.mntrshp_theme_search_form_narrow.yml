@@ -1,0 +1,23 @@
+uuid: 44cc1f09-54ff-4f96-bfaf-1f8127814274
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - mntrshp_theme
+_core:
+  default_config_hash: dMwLAC3PytJ_dhMFZxJLVegOIvNW-XjFah-wzwJGiRA
+id: mntrshp_theme_search_form_narrow
+theme: mntrshp_theme
+region: sidebar_first
+weight: -7
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

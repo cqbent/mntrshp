@@ -1,0 +1,29 @@
+uuid: d4974f69-402a-49b3-aed7-1f27cf15a14b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_job_state
+    - paragraphs.paragraphs_type.job_history_details
+    - taxonomy.vocabulary.states
+id: paragraph.job_history_details.field_job_state
+field_name: field_job_state
+entity_type: paragraph
+bundle: job_history_details
+label: 'Job State'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      states: states
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

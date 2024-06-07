@@ -1,0 +1,52 @@
+uuid: cab2c972-944c-4608-90fe-665f1935d973
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.job_history_details.field_job_city
+    - field.field.paragraph.job_history_details.field_job_company
+    - field.field.paragraph.job_history_details.field_job_dates
+    - field.field.paragraph.job_history_details.field_job_state
+    - paragraphs.paragraphs_type.job_history_details
+  module:
+    - datetime_range
+id: paragraph.job_history_details.default
+targetEntityType: paragraph
+bundle: job_history_details
+mode: default
+content:
+  field_job_city:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_job_company:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_job_dates:
+    type: daterange_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_job_state:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

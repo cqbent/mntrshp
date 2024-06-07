@@ -1,0 +1,23 @@
+uuid: b27a963c-6da9-4d96-b7c7-59cae0be5f05
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - user
+id: user.field_personal_letter_document
+field_name: field_personal_letter_document
+entity_type: user
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

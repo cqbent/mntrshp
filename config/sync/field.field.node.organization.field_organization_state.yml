@@ -1,0 +1,29 @@
+uuid: edf6eeaa-aadf-4031-9cbd-7b6e98e50519
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organization_state
+    - node.type.organization
+    - taxonomy.vocabulary.states
+id: node.organization.field_organization_state
+field_name: field_organization_state
+entity_type: node
+bundle: organization
+label: 'Organization State'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      states: states
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

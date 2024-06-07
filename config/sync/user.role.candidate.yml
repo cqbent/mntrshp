@@ -1,0 +1,9 @@
+uuid: de23f79d-f816-4318-b5ef-e71c5cbd5183
+langcode: en
+status: true
+dependencies: {  }
+id: candidate
+label: Candidate
+weight: 4
+is_admin: null
+permissions: {  }

@@ -1,0 +1,18 @@
+uuid: 32167146-dbce-4714-ad07-1d063f4dd23e
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_legal_agreement
+field_name: field_legal_agreement
+entity_type: user
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

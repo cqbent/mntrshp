@@ -1,0 +1,22 @@
+uuid: 465e7deb-0c58-4068-9b31-1867b90d526d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mntrshp_react
+_core:
+  default_config_hash: JM68e-94IkbQqEmsnvnAFeu2Wxql2FiCVQEtJyQ9ky4
+id: mntrshp_react_primary_local_tasks
+theme: mntrshp_react
+region: content
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

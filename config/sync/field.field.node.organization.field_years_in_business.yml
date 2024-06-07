@@ -1,0 +1,23 @@
+uuid: 8631ab61-4258-4a4b-8d4d-8473961e9d5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_years_in_business
+    - node.type.organization
+id: node.organization.field_years_in_business
+field_name: field_years_in_business
+entity_type: node
+bundle: organization
+label: 'Years in Business'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

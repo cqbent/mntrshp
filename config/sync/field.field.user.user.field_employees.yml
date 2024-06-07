@@ -1,0 +1,35 @@
+uuid: 8d2a1968-6b31-400b-be2b-03202dbdf37a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_employees
+  module:
+    - multiple_registration
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form_required:
+      authenticated: 0
+      candidate: 0
+      employer: 0
+    user_additional_register_form:
+      employer: employer
+      authenticated: 0
+      candidate: 0
+id: user.user.field_employees
+field_name: field_employees
+entity_type: user
+bundle: user
+label: Employees
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,41 @@
+uuid: 38df3c71-f20c-4b77-8d41-60480352a39c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_general_skills
+    - taxonomy.vocabulary.general_skills
+  module:
+    - multiple_registration
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form_required:
+      authenticated: 0
+      candidate: 0
+      employer: 0
+    user_additional_register_form:
+      candidate: candidate
+      authenticated: 0
+      employer: 0
+id: user.user.field_general_skills
+field_name: field_general_skills
+entity_type: user
+bundle: user
+label: 'General Skills'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      general_skills: general_skills
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

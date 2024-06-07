@@ -1,0 +1,37 @@
+uuid: 6d733651-c2a4-4f9d-a5dd-f3e4b749f943
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.opportunities.body
+    - field.field.node.opportunities.field_contact
+    - field.field.node.opportunities.field_job_type
+    - field.field.node.opportunities.field_organization
+    - node.type.opportunities
+  module:
+    - text
+    - user
+id: node.opportunities.teaser
+targetEntityType: node
+bundle: opportunities
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_contact: true
+  field_job_type: true
+  field_organization: true
+  private_message_link: true

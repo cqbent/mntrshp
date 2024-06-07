@@ -1,0 +1,19 @@
+uuid: f2c96657-4209-4ba8-a5f9-0eb5d20a5fb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_job_city
+    - paragraphs.paragraphs_type.job_history_details
+id: paragraph.job_history_details.field_job_city
+field_name: field_job_city
+entity_type: paragraph
+bundle: job_history_details
+label: 'Job City'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

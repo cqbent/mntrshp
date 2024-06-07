@@ -1,0 +1,25 @@
+uuid: 4bb8792f-def8-41d3-9718-a483813005dd
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0e28493d-b0f2-436e-8196-baa503b31268'
+  module:
+    - block_content
+  theme:
+    - mntrshp_react
+id: mntrshp_react_mntrshpfooter
+theme: mntrshp_react
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:0e28493d-b0f2-436e-8196-baa503b31268'
+settings:
+  id: 'block_content:0e28493d-b0f2-436e-8196-baa503b31268'
+  label: 'Mntrshp Footer'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

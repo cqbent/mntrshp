@@ -1,0 +1,11 @@
+uuid: 20731ba7-97f6-47e1-91af-f02dddc2a568
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.register_employer
+label: 'Register Employer'
+description: ''
+targetEntityType: user
+cache: true

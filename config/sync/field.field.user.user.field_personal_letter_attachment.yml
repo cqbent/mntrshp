@@ -1,0 +1,41 @@
+uuid: e3f35a68-09f9-4817-9474-018875443ca1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_personal_letter_attachment
+    - media.type.document
+  module:
+    - multiple_registration
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form_required:
+      authenticated: 0
+      candidate: 0
+      employer: 0
+    user_additional_register_form:
+      authenticated: 0
+      candidate: 0
+      employer: 0
+id: user.user.field_personal_letter_attachment
+field_name: field_personal_letter_attachment
+entity_type: user
+bundle: user
+label: 'Personal Letter Attachment'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

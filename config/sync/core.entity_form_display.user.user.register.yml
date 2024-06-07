@@ -1,0 +1,420 @@
+uuid: 38a62d73-a32b-4286-92bb-ded625d79438
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register
+    - field.field.user.user.field_areas_of_interest
+    - field.field.user.user.field_citizenship
+    - field.field.user.user.field_city
+    - field.field.user.user.field_employees
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_general_skills
+    - field.field.user.user.field_high_school
+    - field.field.user.user.field_high_school_city
+    - field.field.user.user.field_high_school_comments
+    - field.field.user.user.field_high_school_dates
+    - field.field.user.user.field_high_school_graduated
+    - field.field.user.user.field_high_school_state
+    - field.field.user.user.field_job_history
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_legal_agreement
+    - field.field.user.user.field_organization
+    - field.field.user.user.field_personal_letter_attachment
+    - field.field.user.user.field_personal_letter_document
+    - field.field.user.user.field_personal_letter_field
+    - field.field.user.user.field_personal_video
+    - field.field.user.user.field_personal_video_upload
+    - field.field.user.user.field_position
+    - field.field.user.user.field_state
+    - field.field.user.user.field_veteran_status
+    - field.field.user.user.field_zip
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - datetime_range
+    - field_group
+    - file
+    - paragraphs
+    - path
+    - svg_image
+    - text
+    - user
+    - video
+third_party_settings:
+  field_group:
+    group_step_1:
+      children:
+        - field_first_name
+        - field_last_name
+        - field_city
+        - field_state
+        - field_zip
+      label: 'Step 1'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: form_step
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        show_step_title: false
+        step_description: "<h3>Let’s get you on your way to a great career</h3>\r\nLots of employers with great positions are waiting. Enter your info below and we’ll get started building your profile with you so you’ll be matched with exactly the right opportunities."
+        back_button_show: false
+        back_button_text: Back
+        next_button_text: Next
+        step_help: ''
+    group_step_2:
+      children:
+        - field_areas_of_interest
+      label: 'Step 2'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: form_step
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        show_step_title: false
+        step_description: "<h3>What Are You Looking For?</h3>\r\nTake a look at the list below and see if any of the choices matches the area you’re interested in. If not, choose “Other” at the bottom of the list and type your area of interest."
+        back_button_show: true
+        back_button_text: Back
+        next_button_text: Next
+        step_help: ''
+    group_step_3:
+      children:
+        - field_general_skills
+      label: 'Step 3'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: form_step
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        show_step_title: false
+        step_description: "<h3>Tell us a little more</h3>\r\nIf you see a field that you don’t have an answer for, just type “NA”. If the field has an asterisk, you’ll need to provide that information as part of your profile."
+        back_button_show: true
+        back_button_text: Back
+        next_button_text: Next
+        step_help: ''
+    group_step_4:
+      children:
+        - field_personal_letter_field
+        - field_personal_letter_document
+      label: 'Step 4'
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: form_step
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        show_step_title: false
+        step_description: "<h3>Now in your own words</h3>\r\nWe think you’re great and we want to hear more about you. You can upload your response, or if you’d rather use our form just choose “Use Form” below."
+        back_button_show: true
+        back_button_text: Back
+        next_button_text: Next
+        step_help: ''
+    group_step_5:
+      children:
+        - user_picture
+        - field_personal_video_upload
+      label: 'Step 5'
+      region: content
+      parent_name: ''
+      weight: 4
+      format_type: form_step
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        show_step_title: false
+        step_description: "<h3>Here’s your chance to shine</h3>\r\nThis is your chance to introduce yourself as yourself in a 45-second video.  Describe your special qualities, your unique skills, your ambitions. Here’s an example. "
+        back_button_show: true
+        back_button_text: Back
+        next_button_text: Next
+        step_help: ''
+    group_step_6:
+      children:
+        - field_high_school
+        - field_high_school_city
+        - field_high_school_state
+        - field_high_school_comments
+        - field_high_school_dates
+        - field_high_school_graduated
+      label: 'Step 6'
+      region: content
+      parent_name: ''
+      weight: 5
+      format_type: form_step
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        show_step_title: false
+        step_description: "<h3>Let’s Finish Up</h3>\r\nJust need a little more information to be sure you’re showing off the real you, and to get the nuts and bolts stuff in there too. "
+        back_button_show: true
+        back_button_text: Back
+        next_button_text: Next
+        step_help: ''
+    group_step_7:
+      children:
+        - field_job_history
+      label: 'Step 7'
+      region: content
+      parent_name: ''
+      weight: 6
+      format_type: form_step
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        show_step_title: false
+        step_description: "<h3>A Few More Things</h3>\r\nYour work history may or may not align with your interests, but it’s still good to know."
+        back_button_show: true
+        back_button_text: Back
+        next_button_text: Next
+        step_help: ''
+    group_step_8:
+      children:
+        - field_veteran_status
+        - field_citizenship
+      label: 'Step 8'
+      region: content
+      parent_name: ''
+      weight: 7
+      format_type: form_step
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        show_step_title: false
+        step_description: "<h3>Some Legal Things</h3>\r\nWe do have to ask these questions, but they’re important enough that we’d ask them anyway."
+        back_button_show: true
+        back_button_text: Back
+        next_button_text: Next
+        step_help: ''
+    group_step_9:
+      children:
+        - account
+        - private_messages
+      label: 'Step 9'
+      region: content
+      parent_name: ''
+      weight: 8
+      format_type: form_step
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        show_step_title: false
+        step_description: "<h3>Final Step: Email address and username</h3>\r\nCreate your username and add your email address to create the account"
+        back_button_show: true
+        back_button_text: Back
+        next_button_text: Next
+        step_help: ''
+_core:
+  default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
+id: user.user.register
+targetEntityType: user
+bundle: user
+mode: register
+content:
+  account:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_areas_of_interest:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_citizenship:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_city:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_first_name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_general_skills:
+    type: options_select
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_high_school:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_high_school_city:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_high_school_comments:
+    type: string_textarea
+    weight: 9
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_high_school_dates:
+    type: daterange_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_high_school_graduated:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_high_school_state:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_job_history:
+    type: entity_reference_paragraphs
+    weight: 7
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_last_name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_personal_letter_document:
+    type: file_generic
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_personal_letter_field:
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_personal_video_upload:
+    type: video_upload
+    weight: 3
+    region: content
+    settings:
+      progress_indicator: throbber
+      file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
+      file_extensions: 'mp4 ogv webm'
+      max_filesize: ''
+      uri_scheme: public
+    third_party_settings: {  }
+  field_state:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_veteran_status:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_zip:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  private_messages:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_picture:
+    type: image_image
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  contact: true
+  field_employees: true
+  field_legal_agreement: true
+  field_organization: true
+  field_personal_letter_attachment: true
+  field_personal_video: true
+  field_position: true
+  language: true
+  timezone: true

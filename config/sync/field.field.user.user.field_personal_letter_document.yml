@@ -1,0 +1,38 @@
+uuid: ff80ae4b-d2b2-4ed3-aa99-1604fca88e3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_personal_letter_document
+  module:
+    - file
+    - multiple_registration
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form_required:
+      authenticated: 0
+      candidate: 0
+      employer: 0
+    user_additional_register_form:
+      candidate: candidate
+      authenticated: 0
+      employer: 0
+id: user.user.field_personal_letter_document
+field_name: field_personal_letter_document
+entity_type: user
+bundle: user
+label: 'Personal Letter Document'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf doc docx'
+  max_filesize: ''
+  description_field: false
+field_type: file

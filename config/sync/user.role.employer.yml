@@ -1,0 +1,16 @@
+uuid: 261f8c89-0e10-42e9-a6b0-519c390f437f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.opportunities
+  module:
+    - node
+id: employer
+label: Employer
+weight: 5
+is_admin: null
+permissions:
+  - 'create opportunities content'
+  - 'delete own opportunities content'
+  - 'edit own opportunities content'

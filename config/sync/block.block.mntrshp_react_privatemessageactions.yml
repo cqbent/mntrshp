@@ -1,0 +1,20 @@
+uuid: 8347c904-e59b-49fc-ab5f-03c7dbf6cc6b
+langcode: en
+status: true
+dependencies:
+  module:
+    - private_message
+  theme:
+    - mntrshp_react
+id: mntrshp_react_privatemessageactions
+theme: mntrshp_react
+region: content
+weight: 0
+provider: null
+plugin: private_message_actions_block
+settings:
+  id: private_message_actions_block
+  label: 'Private Message Actions'
+  label_display: visible
+  provider: private_message
+visibility: {  }

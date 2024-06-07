@@ -1,0 +1,31 @@
+uuid: 39ff2374-2bba-4e54-96ac-1d446e19e151
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_high_school_comments
+  module:
+    - multiple_registration
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form_required:
+      authenticated: 0
+      candidate: 0
+      employer: 0
+    user_additional_register_form:
+      candidate: candidate
+      authenticated: 0
+      employer: 0
+id: user.user.field_high_school_comments
+field_name: field_high_school_comments
+entity_type: user
+bundle: user
+label: 'High School Comments'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

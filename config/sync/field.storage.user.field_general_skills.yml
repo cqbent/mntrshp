@@ -1,0 +1,20 @@
+uuid: a2f35343-dcbc-404a-9a78-84d5511d76a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - user
+id: user.field_general_skills
+field_name: field_general_skills
+entity_type: user
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

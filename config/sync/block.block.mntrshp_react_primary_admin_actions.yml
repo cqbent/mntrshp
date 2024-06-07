@@ -1,0 +1,20 @@
+uuid: 3ed23fa1-3f04-4290-9b48-4defe72894a4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mntrshp_react
+_core:
+  default_config_hash: 1cr8aTOvhaGc1nLnq0CtFjq8O_H-N6-AtVOHQbkeofg
+id: mntrshp_react_primary_admin_actions
+theme: mntrshp_react
+region: content
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

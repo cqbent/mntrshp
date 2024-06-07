@@ -1,0 +1,34 @@
+uuid: 1a89d220-4f21-42c4-a4d0-dbe08db2156a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.employer-menu
+  module:
+    - system
+    - user
+  theme:
+    - mntrshp_theme
+id: mntrshp_theme_employermenu
+theme: mntrshp_theme
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:employer-menu'
+settings:
+  id: 'system_menu_block:employer-menu'
+  label: 'Employer Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      employer: employer

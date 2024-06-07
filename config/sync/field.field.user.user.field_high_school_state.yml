@@ -1,0 +1,41 @@
+uuid: af26815b-d2b9-4459-87d7-2cc308612777
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_high_school_state
+    - taxonomy.vocabulary.states
+  module:
+    - multiple_registration
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form_required:
+      authenticated: 0
+      candidate: 0
+      employer: 0
+    user_additional_register_form:
+      candidate: candidate
+      authenticated: 0
+      employer: 0
+id: user.user.field_high_school_state
+field_name: field_high_school_state
+entity_type: user
+bundle: user
+label: 'High School State'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      states: states
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

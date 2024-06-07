@@ -1,0 +1,25 @@
+uuid: 80e42b52-067d-44aa-b8ac-bb30a1c65dbd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mntrshp_react
+_core:
+  default_config_hash: Glt8aYTi7AXqVE9yk-eEqyBnKFTDAWsQ8wgix8tFF3c
+id: mntrshp_react_site_branding
+theme: mntrshp_react
+region: header
+weight: -9
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: 57a3e622-4f98-4f3f-9b9d-270ce73c8c22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_job_dates
+    - paragraphs.paragraphs_type.job_history_details
+  module:
+    - datetime_range
+id: paragraph.job_history_details.field_job_dates
+field_name: field_job_dates
+entity_type: paragraph
+bundle: job_history_details
+label: 'Job Dates'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

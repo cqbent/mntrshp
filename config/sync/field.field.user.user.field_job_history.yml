@@ -1,0 +1,42 @@
+uuid: 1e2c33a2-84a1-46ee-8934-230dcd6c9fa2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_job_history
+    - paragraphs.paragraphs_type.job_history_details
+  module:
+    - entity_reference_revisions
+    - multiple_registration
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form_required:
+      authenticated: 0
+      candidate: 0
+      employer: 0
+    user_additional_register_form:
+      candidate: candidate
+      authenticated: 0
+      employer: 0
+id: user.user.field_job_history
+field_name: field_job_history
+entity_type: user
+bundle: user
+label: 'Job History'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      job_history_details: job_history_details
+    negate: 0
+    target_bundles_drag_drop:
+      job_history_details:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

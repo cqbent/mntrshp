@@ -1,0 +1,19 @@
+uuid: ba614a29-ce00-4af2-9a4c-a21b6522ac17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organization_city
+    - node.type.organization
+id: node.organization.field_organization_city
+field_name: field_organization_city
+entity_type: node
+bundle: organization
+label: 'Organization City'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

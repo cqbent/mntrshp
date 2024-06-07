@@ -1,0 +1,20 @@
+uuid: 1a21ab56-1af7-43f3-b997-43f16232bb84
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - user
+id: user.field_personal_letter_attachment
+field_name: field_personal_letter_attachment
+entity_type: user
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

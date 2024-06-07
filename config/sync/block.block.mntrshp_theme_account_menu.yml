@@ -1,0 +1,27 @@
+uuid: bda6e722-de5a-4e48-8a06-7c059cb468f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - mntrshp_theme
+_core:
+  default_config_hash: uPz-hly-WT0_AXfe8w826maI20ET4D2nc07hjN1SImI
+id: mntrshp_theme_account_menu
+theme: mntrshp_theme
+region: primary_menu
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }

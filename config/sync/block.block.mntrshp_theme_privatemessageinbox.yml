@@ -1,0 +1,23 @@
+uuid: 42883d5e-84c0-46fc-8774-e3885836a3f0
+langcode: en
+status: false
+dependencies:
+  module:
+    - private_message
+  theme:
+    - mntrshp_theme
+id: mntrshp_theme_privatemessageinbox
+theme: mntrshp_theme
+region: content
+weight: 2
+provider: null
+plugin: private_message_inbox_block
+settings:
+  id: private_message_inbox_block
+  label: 'Private Message Inbox'
+  label_display: visible
+  provider: private_message
+  thread_count: 5
+  ajax_load_count: 5
+  ajax_refresh_rate: 15
+visibility: {  }

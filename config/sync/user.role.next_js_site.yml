@@ -1,0 +1,13 @@
+uuid: 4df1b4a0-cc60-4cb1-a969-dee80681149a
+langcode: en
+status: true
+dependencies:
+  module:
+    - subrequests
+id: next_js_site
+label: 'Next.js Site'
+weight: 6
+is_admin: null
+permissions:
+  - 'access user profiles'
+  - 'issue subrequests'

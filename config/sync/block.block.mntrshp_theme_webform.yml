@@ -1,0 +1,34 @@
+uuid: a31d7314-469f-49d7-81ea-bad63e88210e
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.application
+  module:
+    - node
+    - webform
+  theme:
+    - mntrshp_theme
+id: mntrshp_theme_webform
+theme: mntrshp_theme
+region: content
+weight: -5
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Apply For This Opportunity'
+  label_display: visible
+  provider: webform
+  webform_id: application
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      opportunities: opportunities

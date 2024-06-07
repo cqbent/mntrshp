@@ -1,0 +1,8 @@
+uuid: 0c5720e3-48b6-4a95-b75a-4dc91015923d
+langcode: en
+status: true
+dependencies: {  }
+name: 'General Skills'
+vid: general_skills
+description: ''
+weight: 0

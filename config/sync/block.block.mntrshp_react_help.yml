@@ -1,0 +1,22 @@
+uuid: aa556a0e-3249-4215-9ebc-8049ed879e4a
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - mntrshp_react
+_core:
+  default_config_hash: oV_H5dhDvmxEgXA0BNSoeYOCnA4hsj7HVqD9M9e9VUM
+id: mntrshp_react_help
+theme: mntrshp_react
+region: header
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 76c362c1-bd31-4811-b4c0-ef372f96e0be
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mntrshp_theme
+_core:
+  default_config_hash: n6rCaKgc7DOeqE3zYYEpPgjnF1MK95DgM4t2xmM-LCs
+id: mntrshp_theme_content
+theme: mntrshp_theme
+region: content
+weight: -10
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

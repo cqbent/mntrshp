@@ -1,0 +1,20 @@
+uuid: 78edcf4f-ea1e-4e9b-894a-22d0b04a7737
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mntrshp_theme
+_core:
+  default_config_hash: B2x9pMo6egNrQ9n0vEwuSs8wW6razLBw1gZpTuo7OXI
+id: mntrshp_theme_page_title
+theme: mntrshp_theme
+region: content
+weight: -11
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

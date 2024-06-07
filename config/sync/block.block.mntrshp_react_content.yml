@@ -1,0 +1,22 @@
+uuid: 56a6ea08-1637-4cc8-ab09-008201e061c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mntrshp_react
+_core:
+  default_config_hash: n6rCaKgc7DOeqE3zYYEpPgjnF1MK95DgM4t2xmM-LCs
+id: mntrshp_react_content
+theme: mntrshp_react
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

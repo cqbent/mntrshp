@@ -1,0 +1,15 @@
+roles:
+  employer:
+    path: /register/employer
+    url: /user/register/employer
+    redirect_path: ''
+    hidden: 1
+    form_mode_register: register_employer
+    form_mode_edit: default
+  candidate:
+    path: /register/candidate
+    url: /user/register/candidate
+    redirect_path: ''
+    hidden: 1
+    form_mode_register: register
+    form_mode_edit: default

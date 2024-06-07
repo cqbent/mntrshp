@@ -1,0 +1,22 @@
+uuid: a99e2094-1b56-470e-8897-f94dc497dffd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: opportunities_path
+label: 'Opportunities Path'
+type: 'canonical_entities:node'
+pattern: 'opportunities/[node:title]'
+selection_criteria:
+  984c96a7-859a-400c-a3ad-32e55a6a0d91:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 984c96a7-859a-400c-a3ad-32e55a6a0d91
+    context_mapping:
+      node: node
+    bundles:
+      opportunities: opportunities
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,40 @@
+uuid: 4336a87e-ab1f-4316-9236-423a81819400
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.restricted_html
+    - node.type.organization
+    - rest.resource.webform_rest_submit
+  module:
+    - comment
+    - contact
+    - file
+    - filter
+    - media
+    - node
+    - rest
+    - search
+    - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access files overview'
+  - 'access site-wide contact form'
+  - 'create media'
+  - 'create organization content'
+  - 'edit own organization content'
+  - 'restful post webform_rest_submit'
+  - 'search content'
+  - 'update media'
+  - 'use text format basic_html'
+  - 'use text format restricted_html'
+  - 'view media'
+  - 'view own unpublished media'

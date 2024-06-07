@@ -1,0 +1,37 @@
+uuid: cd581b9a-1dcc-4b47-a2bd-bbcf23e68a76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_personal_video_upload
+  module:
+    - multiple_registration
+    - user
+    - video
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form_required:
+      authenticated: 0
+      candidate: 0
+      employer: 0
+    user_additional_register_form:
+      candidate: candidate
+      authenticated: 0
+      employer: 0
+id: user.user.field_personal_video_upload
+field_name: field_personal_video_upload
+entity_type: user
+bundle: user
+label: 'Personal Video Upload'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'videos/[date:custom:Y]-[date:custom:m]'
+  file_extensions: ''
+  max_filesize: ''
+field_type: video

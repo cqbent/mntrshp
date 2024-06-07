@@ -16,7 +16,7 @@ function mntrshp_module_views_query_alter(ViewExecutable $view, QueryPluginBase 
     $user_job_type_values = $user->get('field_areas_of_interest')->getValue();
     $user_job_type_ids = array_column($user_job_type_values, 'target_id');
     // Apply the condition to filter jobs based on job type.
-    $query->addWhere(0, 'node__field_job_type.field_job_type_target_id', $user_job_type_ids, 'IN');
+    // $query->addWhere(0, 'node__field_job_type.field_job_type_target_id', $user_job_type_ids, 'IN');
     // dpm($query->where);
   }
 }

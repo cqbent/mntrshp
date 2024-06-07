@@ -1,0 +1,10 @@
+uuid: f293d4a2-4450-4c06-9b0d-cad248d0c325
+langcode: en
+status: true
+dependencies: {  }
+id: job_history_details
+label: 'Job History Details'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

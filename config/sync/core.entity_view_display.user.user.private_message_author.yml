@@ -1,0 +1,80 @@
+uuid: 08f0baab-68a5-42d3-b9b7-6eea7fbb95b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.private_message_author
+    - field.field.user.user.field_areas_of_interest
+    - field.field.user.user.field_citizenship
+    - field.field.user.user.field_city
+    - field.field.user.user.field_employees
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_general_skills
+    - field.field.user.user.field_high_school
+    - field.field.user.user.field_high_school_city
+    - field.field.user.user.field_high_school_comments
+    - field.field.user.user.field_high_school_dates
+    - field.field.user.user.field_high_school_graduated
+    - field.field.user.user.field_high_school_state
+    - field.field.user.user.field_job_history
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_legal_agreement
+    - field.field.user.user.field_organization
+    - field.field.user.user.field_personal_letter_attachment
+    - field.field.user.user.field_personal_letter_document
+    - field.field.user.user.field_personal_letter_field
+    - field.field.user.user.field_personal_video
+    - field.field.user.user.field_personal_video_upload
+    - field.field.user.user.field_position
+    - field.field.user.user.field_state
+    - field.field.user.user.field_veteran_status
+    - field.field.user.user.field_zip
+    - field.field.user.user.user_picture
+  module:
+    - user
+_core:
+  default_config_hash: 5VkjdDDe_kM-giLC61z36ACn6Z2eMjaH63Rh6adWWpw
+id: user.user.private_message_author
+targetEntityType: user
+bundle: user
+mode: private_message_author
+content:
+  linked_username:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  masquerade:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 50
+    region: content
+hidden:
+  field_areas_of_interest: true
+  field_citizenship: true
+  field_city: true
+  field_employees: true
+  field_first_name: true
+  field_general_skills: true
+  field_high_school: true
+  field_high_school_city: true
+  field_high_school_comments: true
+  field_high_school_dates: true
+  field_high_school_graduated: true
+  field_high_school_state: true
+  field_job_history: true
+  field_last_name: true
+  field_legal_agreement: true
+  field_organization: true
+  field_personal_letter_attachment: true
+  field_personal_letter_document: true
+  field_personal_letter_field: true
+  field_personal_video: true
+  field_personal_video_upload: true
+  field_position: true
+  field_state: true
+  field_veteran_status: true
+  field_zip: true
+  member_for: true
+  private_message_link: true
+  user_picture: true

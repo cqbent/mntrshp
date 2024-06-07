@@ -1,0 +1,33 @@
+uuid: 31064683-2a30-41ae-bb37-aa4cc70d298b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_veteran_status
+  module:
+    - multiple_registration
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form_required:
+      authenticated: 0
+      candidate: 0
+      employer: 0
+    user_additional_register_form:
+      candidate: candidate
+      authenticated: 0
+      employer: 0
+id: user.user.field_veteran_status
+field_name: field_veteran_status
+entity_type: user
+bundle: user
+label: 'Veteran Status'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

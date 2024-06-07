@@ -1,0 +1,22 @@
+uuid: 88c78819-12dd-457f-8999-eeff577b08be
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mntrshp_theme
+_core:
+  default_config_hash: SipB47AzVLbGzS-0p2AW842NBpGIjN4QqUBuXgNkTnk
+id: mntrshp_theme_messages
+theme: mntrshp_theme
+region: highlighted
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

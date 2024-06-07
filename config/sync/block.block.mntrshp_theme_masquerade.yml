@@ -1,0 +1,21 @@
+uuid: d1a8af6d-600d-473e-a6dd-903891c9a9d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - masquerade
+  theme:
+    - mntrshp_theme
+id: mntrshp_theme_masquerade
+theme: mntrshp_theme
+region: content
+weight: -1
+provider: null
+plugin: masquerade
+settings:
+  id: masquerade
+  label: Masquerade
+  label_display: visible
+  provider: masquerade
+  show_unmasquerade_link: false
+visibility: {  }

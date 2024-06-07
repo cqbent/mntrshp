@@ -1,0 +1,18 @@
+uuid: aa564b45-46d4-427f-a384-7734936831ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Opportunities
+type: opportunities
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

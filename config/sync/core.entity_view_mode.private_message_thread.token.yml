@@ -1,0 +1,11 @@
+uuid: ab2b555a-f537-4f3e-9f0e-f0f86b567e61
+langcode: en
+status: true
+dependencies:
+  module:
+    - private_message
+id: private_message_thread.token
+label: Token
+description: ''
+targetEntityType: private_message_thread
+cache: true

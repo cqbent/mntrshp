@@ -1,0 +1,43 @@
+uuid: d9ed741b-9e5a-42b7-8824-2bfd582d76d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_personal_video
+    - media.type.remote_video
+    - media.type.video
+  module:
+    - multiple_registration
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form_required:
+      authenticated: 0
+      candidate: 0
+      employer: 0
+    user_additional_register_form:
+      candidate: candidate
+      authenticated: 0
+      employer: 0
+id: user.user.field_personal_video
+field_name: field_personal_video
+entity_type: user
+bundle: user
+label: 'Personal Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      remote_video: remote_video
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: video
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: 777e3577-cea1-4a21-8015-3a048e8304f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - mntrshp_theme
+_core:
+  default_config_hash: oV_H5dhDvmxEgXA0BNSoeYOCnA4hsj7HVqD9M9e9VUM
+id: mntrshp_theme_help
+theme: mntrshp_theme
+region: highlighted
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

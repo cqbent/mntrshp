@@ -1,0 +1,11 @@
+uuid: 4d6c9fed-6787-4c16-976f-946ea8ba27f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.edit_employer
+label: 'Edit Employer'
+description: ''
+targetEntityType: user
+cache: true

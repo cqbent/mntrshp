@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Areas of Interest'
 vid: areas_of_interest
-description: ''
+description: null
 weight: 0
+new_revision: false

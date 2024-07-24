@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'General Skills'
 vid: general_skills
-description: ''
+description: null
 weight: 0
+new_revision: false

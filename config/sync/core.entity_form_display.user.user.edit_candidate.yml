@@ -1,8 +1,9 @@
-uuid: b527c55e-1e05-4f84-8f13-6c1aa0faf8bd
+uuid: af715129-6d10-454b-9d7f-82c0007e348c
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.user.edit_candidate
     - field.field.user.user.field_areas_of_interest
     - field.field.user.user.field_citizenship
     - field.field.user.user.field_city
@@ -32,6 +33,7 @@ dependencies:
     - image.style.thumbnail
   module:
     - datetime_range
+    - field_group
     - file
     - media_library
     - paragraphs
@@ -40,12 +42,32 @@ dependencies:
     - text
     - user
     - video
+third_party_settings:
+  field_group:
+    group_name_and_address:
+      children:
+        - field_first_name
+        - field_city
+        - field_last_name
+        - field_state
+        - field_zip
+      label: 'Name and Address'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
-id: user.user.default
+id: user.user.edit_candidate
 targetEntityType: user
 bundle: user
-mode: default
+mode: edit_candidate
 content:
   account:
     weight: 17
@@ -53,13 +75,13 @@ content:
     settings: {  }
     third_party_settings: {  }
   contact:
-    weight: 6
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   field_areas_of_interest:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 3
     region: content
     settings:
       match_operator: CONTAINS
@@ -69,29 +91,22 @@ content:
     third_party_settings: {  }
   field_citizenship:
     type: boolean_checkbox
-    weight: 24
+    weight: 23
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_city:
     type: string_textfield
-    weight: 11
+    weight: 5
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_employees:
-    type: number
-    weight: 28
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
   field_first_name:
     type: string_textfield
-    weight: 9
+    weight: 4
     region: content
     settings:
       size: 60
@@ -99,7 +114,7 @@ content:
     third_party_settings: {  }
   field_general_skills:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 5
     region: content
     settings:
       match_operator: CONTAINS
@@ -125,7 +140,7 @@ content:
     third_party_settings: {  }
   field_high_school_comments:
     type: string_textarea
-    weight: 21
+    weight: 20
     region: content
     settings:
       rows: 5
@@ -133,13 +148,13 @@ content:
     third_party_settings: {  }
   field_high_school_dates:
     type: daterange_default
-    weight: 19
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   field_high_school_graduated:
     type: boolean_checkbox
-    weight: 20
+    weight: 19
     region: content
     settings:
       display_label: true
@@ -156,7 +171,7 @@ content:
     third_party_settings: {  }
   field_job_history:
     type: paragraphs
-    weight: 22
+    weight: 21
     region: content
     settings:
       title: Paragraph
@@ -174,7 +189,7 @@ content:
     third_party_settings: {  }
   field_last_name:
     type: string_textfield
-    weight: 10
+    weight: 6
     region: content
     settings:
       size: 60
@@ -182,20 +197,10 @@ content:
     third_party_settings: {  }
   field_legal_agreement:
     type: boolean_checkbox
-    weight: 29
+    weight: 27
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
-  field_organization:
-    type: entity_reference_autocomplete
-    weight: 31
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   field_personal_letter_attachment:
     type: media_library_widget
@@ -206,14 +211,14 @@ content:
     third_party_settings: {  }
   field_personal_letter_document:
     type: file_generic
-    weight: 25
+    weight: 24
     region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
   field_personal_letter_field:
     type: text_textarea_with_summary
-    weight: 5
+    weight: 7
     region: content
     settings:
       rows: 9
@@ -223,7 +228,7 @@ content:
     third_party_settings: {  }
   field_personal_video:
     type: entity_reference_autocomplete
-    weight: 7
+    weight: 9
     region: content
     settings:
       match_operator: CONTAINS
@@ -233,7 +238,7 @@ content:
     third_party_settings: {  }
   field_personal_video_upload:
     type: video_embed
-    weight: 26
+    weight: 25
     region: content
     settings:
       allowed_providers:
@@ -241,17 +246,9 @@ content:
       file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
       uri_scheme: public
     third_party_settings: {  }
-  field_position:
-    type: string_textfield
-    weight: 30
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_state:
     type: entity_reference_autocomplete
-    weight: 18
+    weight: 7
     region: content
     settings:
       match_operator: CONTAINS
@@ -261,46 +258,49 @@ content:
     third_party_settings: {  }
   field_veteran_status:
     type: boolean_checkbox
-    weight: 23
+    weight: 22
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_zip:
     type: string_textfield
-    weight: 12
+    weight: 8
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   language:
-    weight: 2
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 27
+    weight: 26
     region: content
     settings: {  }
     third_party_settings: {  }
   private_messages:
-    weight: 4
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   timezone:
-    weight: 8
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   user_picture:
     type: image_image
-    weight: 0
+    weight: 1
     region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_employees: true
+  field_organization: true
+  field_position: true

@@ -22,7 +22,11 @@ function mntrshp_module_views_query_alter(ViewExecutable $view, QueryPluginBase 
 }
 
 function mntrshp_module_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
-  if ($form_id === 'user_register_form') {
+  //dpm($form);
+  if ($form_id === 'user_form') {
     // do something
   }
 }
+
+
+

@@ -1,0 +1,11 @@
+uuid: a75165db-6f44-4d7a-96f5-4dc4acbcabdd
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.edit_candidate
+label: 'Edit Candidate'
+description: ''
+targetEntityType: user
+cache: true

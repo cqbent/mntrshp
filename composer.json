@@ -23,6 +23,7 @@
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/devel": "^5.0",
+        "drupal/form_mode_control": "^2.3",
         "drupal/inline_entity_form": "^3.0@RC",
         "drupal/jsonapi_extras": "^3.24",
         "drupal/masquerade": "^2.0@RC",
@@ -38,7 +39,8 @@
         "drupal/webform_rest": "^4.1",
         "drupal/webform_views": "^5.2",
         "drush/drush": "^12.4",
-        "platformsh/config-reader": "^2.4"
+        "platformsh/config-reader": "^2.4",
+        "wikimedia/composer-merge-plugin": "^2.1"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -52,7 +54,8 @@
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "cweagans/composer-patches": true
+            "cweagans/composer-patches": true,
+            "wikimedia/composer-merge-plugin": true
         },
         "sort-packages": true
     },
@@ -116,6 +119,11 @@
             "drupal/simple_multistep": {
                 "TypeError: key(): Argument #1 ($array) must be of type array, null given in key()": "https://www.drupal.org/files/issues/2023-12-21/simple_multistep-3410339-2.patch"
             }
+        },
+        "merge-plugin": {
+            "include": [
+                "web/modules/contrib/webform/composer.libraries.json"
+            ]
         }
     }
 }

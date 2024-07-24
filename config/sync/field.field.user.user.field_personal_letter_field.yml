@@ -6,8 +6,19 @@ dependencies:
     - field.storage.user.field_personal_letter_field
     - filter.format.basic_html
   module:
+    - multiple_registration
     - text
     - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form_required:
+      authenticated: 0
+      candidate: 0
+      employer: 0
+    user_additional_register_form:
+      candidate: candidate
+      authenticated: 0
+      employer: 0
 id: user.user.field_personal_letter_field
 field_name: field_personal_letter_field
 entity_type: user

@@ -1,0 +1,18 @@
+uuid: 19af1d04-ea1e-4a20-99cb-73737fa9a1f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.opportunities
+id: node.opportunities.title
+field_name: title
+entity_type: node
+bundle: opportunities
+label: 'Job Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

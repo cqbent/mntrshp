@@ -11,7 +11,7 @@ id: node.opportunities.body
 field_name: body
 entity_type: node
 bundle: opportunities
-label: Body
+label: 'Opportunity Description'
 description: ''
 required: false
 translatable: true

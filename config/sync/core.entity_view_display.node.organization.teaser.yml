@@ -12,8 +12,51 @@ dependencies:
     - field.field.node.organization.field_years_in_business
     - node.type.organization
   module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          f7a54c97-690c-45ea-9731-c32f3a7d8db8:
+            uuid: f7a54c97-690c-45ea-9731-c32f3a7d8db8
+            region: content
+            configuration:
+              id: 'extra_field_block:node:organization:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          b026ce7d-e1b3-4768-920f-d09fe97f4045:
+            uuid: b026ce7d-e1b3-4768-920f-d09fe97f4045
+            region: content
+            configuration:
+              id: 'field_block:node:organization:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_summary_or_trimmed
+                label: hidden
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
 id: node.organization.teaser
 targetEntityType: node
 bundle: organization

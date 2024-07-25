@@ -4,13 +4,103 @@ status: true
 dependencies:
   config:
     - field.field.node.opportunities.body
-    - field.field.node.opportunities.field_contact
+    - field.field.node.opportunities.field_department
+    - field.field.node.opportunities.field_employment_type
     - field.field.node.opportunities.field_job_type
-    - field.field.node.opportunities.field_organization
     - node.type.opportunities
   module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
+    - options
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          c929ba74-aabd-43b4-b3aa-3b471256a0c7:
+            uuid: c929ba74-aabd-43b4-b3aa-3b471256a0c7
+            region: content
+            configuration:
+              id: 'extra_field_block:node:opportunities:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          f9a7f7d2-81c2-4d14-8214-b07a49030132:
+            uuid: f9a7f7d2-81c2-4d14-8214-b07a49030132
+            region: content
+            configuration:
+              id: 'field_block:node:opportunities:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          3c329fb7-b76e-4cb1-9a1f-68f752b12332:
+            uuid: 3c329fb7-b76e-4cb1-9a1f-68f752b12332
+            region: content
+            configuration:
+              id: 'field_block:node:opportunities:field_job_type'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          548684c1-687c-4029-99c1-51797170455b:
+            uuid: 548684c1-687c-4029-99c1-51797170455b
+            region: content
+            configuration:
+              id: 'field_block:node:opportunities:field_employment_type'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          ffa8f480-4bcf-42c9-ae69-e8950f4f1629:
+            uuid: ffa8f480-4bcf-42c9-ae69-e8950f4f1629
+            region: content
+            configuration:
+              id: 'field_block:node:opportunities:field_department'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+        third_party_settings: {  }
 id: node.opportunities.default
 targetEntityType: node
 bundle: opportunities
@@ -23,13 +113,20 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
-  field_contact:
-    type: entity_reference_label
+  field_department:
+    type: string
     label: above
     settings:
-      link: true
+      link_to_entity: false
     third_party_settings: {  }
-    weight: 103
+    weight: 106
+    region: content
+  field_employment_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
     region: content
   field_job_type:
     type: entity_reference_label
@@ -38,14 +135,6 @@ content:
       link: true
     third_party_settings: {  }
     weight: 104
-    region: content
-  field_organization:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 105
     region: content
   links:
     settings: {  }

@@ -34,7 +34,9 @@ dependencies:
   module:
     - datetime_range
     - field_group
+    - field_layout
     - file
+    - layout_discovery
     - media_library
     - paragraphs
     - path
@@ -62,6 +64,10 @@ third_party_settings:
         id: ''
         description: ''
         required_fields: true
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
 id: user.user.edit_candidate

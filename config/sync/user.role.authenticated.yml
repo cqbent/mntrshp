@@ -11,8 +11,10 @@ dependencies:
     - contact
     - file
     - filter
+    - form_mode_manager
     - media
     - node
+    - private_message
     - search
     - shortcut
     - system
@@ -27,12 +29,15 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'access user profiles'
   - 'create organization content'
   - 'delete own files'
   - 'edit own organization content'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
+  - 'use private messaging system'
   - 'use text format basic_html'
   - 'use text format webform_default'
+  - 'use user.default form mode'
   - 'view media'

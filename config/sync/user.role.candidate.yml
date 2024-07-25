@@ -3,10 +3,10 @@ langcode: en
 status: true
 dependencies:
   module:
-    - form_mode_control
+    - form_mode_manager
 id: candidate
 label: Candidate
 weight: 4
 is_admin: null
 permissions:
-  - 'use  The form mode edit_candidate linked to  user entity( user )'
+  - 'use user.edit_candidate form mode'

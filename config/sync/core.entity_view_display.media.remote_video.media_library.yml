@@ -8,7 +8,47 @@ dependencies:
     - image.style.medium
     - media.type.remote_video
   module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
     - svg_image
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          df15dfb7-cda4-4006-bbbe-4d55fd0b9d19:
+            uuid: df15dfb7-cda4-4006-bbbe-4d55fd0b9d19
+            region: content
+            configuration:
+              id: 'field_block:media:remote_video:thumbnail'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: medium
+                  image_loading:
+                    attribute: lazy
+                  svg_attributes:
+                    width: null
+                    height: null
+                  svg_render_as_image: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 _core:
   default_config_hash: PGGoP-hVkXe_S-GiJRAub4PHDu0KhMExylclrqjdJb4
 id: media.remote_video.media_library
@@ -20,10 +60,14 @@ content:
     type: image
     label: hidden
     settings:
-      image_style: medium
       image_link: ''
+      image_style: medium
       image_loading:
         attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
     third_party_settings: {  }
     weight: 0
     region: content

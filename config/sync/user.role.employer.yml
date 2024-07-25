@@ -5,7 +5,7 @@ dependencies:
   config:
     - node.type.opportunities
   module:
-    - form_mode_control
+    - form_mode_manager
     - node
 id: employer
 label: Employer
@@ -15,4 +15,4 @@ permissions:
   - 'create opportunities content'
   - 'delete own opportunities content'
   - 'edit own opportunities content'
-  - 'use  The form mode edit_employer linked to  user entity( user )'
+  - 'use user.edit_employer form mode'

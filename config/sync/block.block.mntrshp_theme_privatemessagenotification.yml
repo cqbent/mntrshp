@@ -1,9 +1,11 @@
 uuid: e5ba851e-d0af-491f-893f-55ef74450d67
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - private_message
+    - system
+    - user
   theme:
     - mntrshp_theme
 id: mntrshp_theme_privatemessagenotification
@@ -18,4 +20,17 @@ settings:
   label_display: visible
   provider: private_message
   ajax_refresh_rate: 15
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/user/*'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      candidate: candidate
+      employer: employer

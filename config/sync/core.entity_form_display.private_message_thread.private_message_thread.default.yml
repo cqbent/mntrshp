@@ -3,7 +3,14 @@ langcode: en
 status: true
 dependencies:
   module:
+    - field_layout
+    - layout_discovery
     - private_message
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: xVcdSTtn_Hdh0KwHYne9Hi3t1-vEq5TUN-taN_bm49w
 id: private_message_thread.private_message_thread.default
@@ -13,13 +20,13 @@ mode: default
 content:
   members:
     type: private_message_thread_member_widget
+    weight: -3
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       max_members: 0
       size: 60
       placeholder: ''
-    weight: -3
-    region: content
     third_party_settings: {  }
 hidden: {  }

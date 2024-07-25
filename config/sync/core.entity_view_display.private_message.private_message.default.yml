@@ -3,8 +3,84 @@ langcode: en
 status: true
 dependencies:
   module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
     - private_message
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          83d11ef5-25b8-4ae4-b06a-92da23e681ce:
+            uuid: 83d11ef5-25b8-4ae4-b06a-92da23e681ce
+            region: content
+            configuration:
+              id: 'field_block:private_message:private_message:created'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: timestamp
+                label: hidden
+                settings:
+                  date_format: short
+                  custom_date_format: ''
+                  timezone: ''
+                  tooltip:
+                    date_format: long
+                    custom_date_format: ''
+                  time_diff:
+                    enabled: false
+                    future_format: '@interval hence'
+                    past_format: '@interval ago'
+                    granularity: 2
+                    refresh: 60
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          17439e53-73ec-415d-a53d-f40c78f8ecef:
+            uuid: 17439e53-73ec-415d-a53d-f40c78f8ecef
+            region: content
+            configuration:
+              id: 'field_block:private_message:private_message:owner'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: inline
+                settings:
+                  view_mode: private_message_author
+                  link: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          323f9361-a9e9-4714-81e7-0a55be82a3cf:
+            uuid: 323f9361-a9e9-4714-81e7-0a55be82a3cf
+            region: content
+            configuration:
+              id: 'field_block:private_message:private_message:message'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
 _core:
   default_config_hash: cSla1miGIdpvla86ElTu6Q25Z9cwtElFBWl_yNLqZRM
 id: private_message.private_message.default
@@ -13,9 +89,8 @@ bundle: private_message
 mode: default
 content:
   created:
+    type: timestamp
     label: hidden
-    weight: -1
-    region: content
     settings:
       date_format: short
       custom_date_format: ''
@@ -30,26 +105,27 @@ content:
         granularity: 2
         refresh: 60
     third_party_settings: {  }
-    type: timestamp
-  message:
-    label: hidden
-    type: text_default
-    weight: 2
+    weight: -1
     region: content
+  message:
+    type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-  owner:
-    label: inline
-    type: entity_reference_entity_view
-    weight: 1
+    weight: 2
     region: content
+  owner:
+    type: entity_reference_entity_view
+    label: inline
     settings:
       view_mode: private_message_author
       link: false
     third_party_settings: {  }
-  timestamp:
-    weight: 0
+    weight: 1
     region: content
+  timestamp:
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden: {  }

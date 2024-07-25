@@ -32,7 +32,9 @@ dependencies:
     - image.style.thumbnail
   module:
     - datetime_range
+    - field_layout
     - file
+    - layout_discovery
     - media_library
     - paragraphs
     - path
@@ -40,6 +42,11 @@ dependencies:
     - text
     - user
     - video
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
 id: user.user.default

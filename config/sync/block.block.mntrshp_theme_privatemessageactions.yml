@@ -4,6 +4,8 @@ status: false
 dependencies:
   module:
     - private_message
+    - system
+    - user
   theme:
     - mntrshp_theme
 id: mntrshp_theme_privatemessageactions
@@ -17,4 +19,17 @@ settings:
   label: 'Private Message Actions'
   label_display: visible
   provider: private_message
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/user/*'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      candidate: candidate
+      employer: employer

@@ -32,7 +32,9 @@ dependencies:
     - field.field.user.user.user_picture
   module:
     - field_group
+    - field_layout
     - inline_entity_form
+    - layout_discovery
     - path
     - user
 third_party_settings:
@@ -98,6 +100,10 @@ third_party_settings:
         back_button_text: Back
         next_button_text: Next
         step_help: ''
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
 id: user.user.register_employer

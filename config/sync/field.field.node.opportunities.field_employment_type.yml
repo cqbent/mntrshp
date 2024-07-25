@@ -1,0 +1,21 @@
+uuid: 679588a1-e101-4e09-981b-7e70452b71f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_employment_type
+    - node.type.opportunities
+  module:
+    - options
+id: node.opportunities.field_employment_type
+field_name: field_employment_type
+entity_type: node
+bundle: opportunities
+label: 'Employment Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

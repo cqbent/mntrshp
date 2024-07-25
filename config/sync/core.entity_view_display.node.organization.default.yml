@@ -11,8 +11,132 @@ dependencies:
     - field.field.node.organization.field_years_in_business
     - node.type.organization
   module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          23057a51-cf2c-4b34-9363-23aadd3b3df5:
+            uuid: 23057a51-cf2c-4b34-9363-23aadd3b3df5
+            region: content
+            configuration:
+              id: 'extra_field_block:node:organization:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          f0cabe3b-1aa6-48b8-aab2-b18071252b15:
+            uuid: f0cabe3b-1aa6-48b8-aab2-b18071252b15
+            region: content
+            configuration:
+              id: 'field_block:node:organization:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          535184dd-ba79-459d-b69a-2577af169359:
+            uuid: 535184dd-ba79-459d-b69a-2577af169359
+            region: content
+            configuration:
+              id: 'field_block:node:organization:field_organization_city'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          13830b98-75ab-4829-8745-5d962442fe2c:
+            uuid: 13830b98-75ab-4829-8745-5d962442fe2c
+            region: content
+            configuration:
+              id: 'field_block:node:organization:field_organization_state'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          8971dad6-a176-4c29-80c4-0891ec869e7f:
+            uuid: 8971dad6-a176-4c29-80c4-0891ec869e7f
+            region: content
+            configuration:
+              id: 'field_block:node:organization:field_organization_type'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          c8be73c0-b151-4026-bcc8-f16f3df84a21:
+            uuid: c8be73c0-b151-4026-bcc8-f16f3df84a21
+            region: content
+            configuration:
+              id: 'field_block:node:organization:field_employees'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_integer
+                label: above
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          b81c1cb1-8478-421f-a57b-9055d4229058:
+            uuid: b81c1cb1-8478-421f-a57b-9055d4229058
+            region: content
+            configuration:
+              id: 'field_block:node:organization:field_years_in_business'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_integer
+                label: above
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+        third_party_settings: {  }
 id: node.organization.default
 targetEntityType: node
 bundle: organization

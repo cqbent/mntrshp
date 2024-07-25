@@ -31,7 +31,44 @@ dependencies:
     - field.field.user.user.field_zip
     - field.field.user.user.user_picture
   module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          9f5ec9af-39d1-4c24-afb8-68571441336b:
+            uuid: 9f5ec9af-39d1-4c24-afb8-68571441336b
+            region: content
+            configuration:
+              id: 'extra_field_block:user:user:linked_username'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          a6dfb25e-39b1-4403-84dc-0ae1b8ac6250:
+            uuid: a6dfb25e-39b1-4403-84dc-0ae1b8ac6250
+            region: content
+            configuration:
+              id: 'extra_field_block:user:user:masquerade'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
 _core:
   default_config_hash: 5VkjdDDe_kM-giLC61z36ACn6Z2eMjaH63Rh6adWWpw
 id: user.user.private_message_author

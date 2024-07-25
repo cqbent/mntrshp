@@ -12,9 +12,107 @@ dependencies:
     - node.type.article
   module:
     - comment
-    - image
+    - field_layout
+    - layout_builder
+    - layout_discovery
+    - svg_image
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          3781c380-56d7-4457-b5e5-372273b001c4:
+            uuid: 3781c380-56d7-4457-b5e5-372273b001c4
+            region: content
+            configuration:
+              id: 'field_block:node:article:field_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: wide
+                  image_loading:
+                    attribute: lazy
+                  svg_attributes:
+                    width: null
+                    height: null
+                  svg_render_as_image: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          8e466afd-859e-4ff0-aa1b-496f1be46540:
+            uuid: 8e466afd-859e-4ff0-aa1b-496f1be46540
+            region: content
+            configuration:
+              id: 'field_block:node:article:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          be8f75aa-ecc9-4f21-89ea-0404c326be40:
+            uuid: be8f75aa-ecc9-4f21-89ea-0404c326be40
+            region: content
+            configuration:
+              id: 'field_block:node:article:field_tags'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          992711e0-960b-48dd-b419-972fa55bb5dd:
+            uuid: 992711e0-960b-48dd-b419-972fa55bb5dd
+            region: content
+            configuration:
+              id: 'extra_field_block:node:article:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 3
+            additional: {  }
+          ec0be279-2dc7-4089-99c0-df4c5ca1db61:
+            uuid: ec0be279-2dc7-4089-99c0-df4c5ca1db61
+            region: content
+            configuration:
+              id: 'field_block:node:article:comment'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: comment_default
+                label: above
+                settings:
+                  view_mode: default
+                  pager_id: 0
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+        third_party_settings: {  }
 _core:
   default_config_hash: 7fb0j9HnIXfP9ndewzgPPzzeX_SV532wuYpkscrCMCk
 id: node.article.default
@@ -42,10 +140,14 @@ content:
     type: image
     label: hidden
     settings:
-      image_style: wide
       image_link: ''
+      image_style: wide
       image_loading:
         attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
     third_party_settings: {  }
     weight: -1
     region: content
@@ -62,4 +164,5 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  private_message_link: true

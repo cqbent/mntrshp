@@ -8,8 +8,51 @@ dependencies:
     - field.field.node.webform.webform
     - node.type.webform
   module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          22071fc2-bf68-4fdc-9944-02946b92638c:
+            uuid: 22071fc2-bf68-4fdc-9944-02946b92638c
+            region: content
+            configuration:
+              id: 'extra_field_block:node:webform:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          a6801ea4-92df-4db3-9dc3-d728b04851cd:
+            uuid: a6801ea4-92df-4db3-9dc3-d728b04851cd
+            region: content
+            configuration:
+              id: 'field_block:node:webform:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_summary_or_trimmed
+                label: hidden
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
 _core:
   default_config_hash: Ls5l3Xs7-YstJnurxFLKj38Exqr2JMZs1j9YeX1Kh2o
 id: node.webform.teaser
@@ -18,17 +61,17 @@ bundle: webform
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 101
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
 hidden:
   private_message_link: true

@@ -5,13 +5,56 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.opportunities.body
-    - field.field.node.opportunities.field_contact
+    - field.field.node.opportunities.field_department
+    - field.field.node.opportunities.field_employment_type
     - field.field.node.opportunities.field_job_type
-    - field.field.node.opportunities.field_organization
     - node.type.opportunities
   module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          db9e7515-16fe-4592-bea8-12433ddf16cb:
+            uuid: db9e7515-16fe-4592-bea8-12433ddf16cb
+            region: content
+            configuration:
+              id: 'extra_field_block:node:opportunities:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          4e730882-d271-4ca0-b3a9-545831abb301:
+            uuid: 4e730882-d271-4ca0-b3a9-545831abb301
+            region: content
+            configuration:
+              id: 'field_block:node:opportunities:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_summary_or_trimmed
+                label: hidden
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
 id: node.opportunities.teaser
 targetEntityType: node
 bundle: opportunities
@@ -31,7 +74,7 @@ content:
     weight: 100
     region: content
 hidden:
-  field_contact: true
+  field_department: true
+  field_employment_type: true
   field_job_type: true
-  field_organization: true
   private_message_link: true

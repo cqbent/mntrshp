@@ -10,6 +10,90 @@ dependencies:
     - paragraphs.paragraphs_type.job_history_details
   module:
     - datetime_range
+    - field_layout
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          5aaa3804-4a01-4b2b-8a74-7dbdb14dc87a:
+            uuid: 5aaa3804-4a01-4b2b-8a74-7dbdb14dc87a
+            region: content
+            configuration:
+              id: 'field_block:paragraph:job_history_details:field_job_company'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          6d622843-f1a3-4063-94d9-616f2b350a8a:
+            uuid: 6d622843-f1a3-4063-94d9-616f2b350a8a
+            region: content
+            configuration:
+              id: 'field_block:paragraph:job_history_details:field_job_city'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          4e90c44f-f86c-479a-b858-4cb9df330302:
+            uuid: 4e90c44f-f86c-479a-b858-4cb9df330302
+            region: content
+            configuration:
+              id: 'field_block:paragraph:job_history_details:field_job_state'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          aed4efc8-8f78-4a47-a82e-76344232e1d0:
+            uuid: aed4efc8-8f78-4a47-a82e-76344232e1d0
+            region: content
+            configuration:
+              id: 'field_block:paragraph:job_history_details:field_job_dates'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: daterange_default
+                label: above
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                  from_to: both
+                  separator: '-'
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
 id: paragraph.job_history_details.default
 targetEntityType: paragraph
 bundle: job_history_details
@@ -37,8 +121,8 @@ content:
     settings:
       timezone_override: ''
       format_type: medium
-      separator: '-'
       from_to: both
+      separator: '-'
     third_party_settings: {  }
     weight: 3
     region: content

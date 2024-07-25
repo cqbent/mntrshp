@@ -10,6 +10,13 @@ dependencies:
     - paragraphs.paragraphs_type.job_history_details
   module:
     - datetime_range
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 id: paragraph.job_history_details.default
 targetEntityType: paragraph
 bundle: job_history_details

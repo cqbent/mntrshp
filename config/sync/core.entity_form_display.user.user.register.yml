@@ -34,7 +34,9 @@ dependencies:
   module:
     - datetime_range
     - field_group
+    - field_layout
     - file
+    - layout_discovery
     - paragraphs
     - path
     - svg_image
@@ -218,6 +220,10 @@ third_party_settings:
         back_button_text: Back
         next_button_text: Next
         step_help: ''
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
 id: user.user.register
